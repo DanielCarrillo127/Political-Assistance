@@ -79,7 +79,7 @@ const Dashboard = () => {
       <input type="checkbox" id="nav__toggle" checked={isChecked} readOnly />
       <div className="sidebar">
         <div className="sidebar__brand">
-          <h1> <HiOutlineAtSymbol size={40} />  <span>PoliticApp</span>
+          <h1> <HiOutlineAtSymbol size={40} />  <span>As~Politico</span>
           </h1>
         </div>
 
@@ -138,7 +138,7 @@ const Dashboard = () => {
             <label htmlFor="nav__toggle" >
               <HiOutlineMenu size={30} className="iconHeader" />
             </label>
-            Dashboard
+            Panel principal 
           </h2>
 
           <Dropdown renderToggle={renderUserContainer} placement={'bottomEnd'}>

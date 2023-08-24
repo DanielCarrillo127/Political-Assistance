@@ -10,7 +10,7 @@ import ProfileCard from './profileCard'
 const HomePage = () => {
 
   const { user } = useContext(DataContext);
-  const [data, setData] = useState({})
+  const [data, setData] = useState([])
 
   async function fetchData() {
     const resAllData = await getCountData(user?.cedula);
@@ -22,7 +22,8 @@ const HomePage = () => {
   }
 
   useEffect(() => {
-    fetchData();
+    if(data.length === 0){
+      fetchData()}
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

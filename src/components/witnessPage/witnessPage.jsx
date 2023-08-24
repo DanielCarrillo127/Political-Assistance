@@ -1,6 +1,6 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useState } from 'react' //useContext
 import { toast } from "react-toastify";
-import { DataContext } from '../../context/userContext';
+// import { DataContext } from '../../context/userContext';
 // import { Input, SelectPicker } from 'rsuite';
 import './witnessPage.css';
 import RecordCard from './recordCard/recordCard';
@@ -9,7 +9,7 @@ import RecordModal from './recordModal/recordModal';
 
 const WitnessPage = () => {
 
-    const { user } = useContext(DataContext);
+    // const { user } = useContext(DataContext);
     //handlers to open the different modals
     const [openDetail, setOpenDetail] = useState(false);
     const handleCloseDetail = () => setOpenDetail(false);

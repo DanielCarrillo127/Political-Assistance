@@ -1,8 +1,8 @@
 import React from 'react'
 import './statisticsPage.css'
 import CalendarComponent from './statistics/calendar'
-import { dataCalendar, dataPieChart } from './statistics/mockData'
-import PieChartComponent from './statistics/pieChart'
+import { dataCalendar } from './statistics/mockData' //dataPieChart
+// import PieChartComponent from './statistics/pieChart'
 const StatisticsPage = () => {
 
     return (
