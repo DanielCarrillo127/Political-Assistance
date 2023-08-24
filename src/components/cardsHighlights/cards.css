@@ -16,12 +16,12 @@
     font-size: 0.8rem;
 }
 
-.card__single:last-child {
+.card__single:nth-last-child(-n+2) {
     background: var(--background-dark-color);
 }
 
-.card__single:last-child h1,
-.card__single:last-child div:first-child ,
-.card__single:last-child div:last-child {
+.card__single:nth-last-child(-n+2) h1,
+.card__single:nth-last-child(-n+2) div:first-child ,
+.card__single:nth-last-child(-n+2) div:last-child {
     color: #fff;
 }

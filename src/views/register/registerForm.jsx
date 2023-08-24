@@ -130,17 +130,17 @@ const RegisterForm = () => {
                     setIsloading(false)
                 }
                 //clear inputs
-                // setName("")
-                // setSurnames("")
-                // setCedula("")
-                // setPhoneNumber("")
-                // setSex("")
-                // setAge("")
-                // setAddress("")
-                // setVotingBooth("")
-                // setTable("")
-                // setLeaderid("")
-                // setProductiveSection("")
+                setName("")
+                setSurnames("")
+                setCedula("")
+                setPhoneNumber("")
+                setSex("")
+                setAge("")
+                setAddress("")
+                setVotingBooth("")
+                setTable("")
+                setLeaderid("")
+                setProductiveSection("")
             } else {
                 toast.warn(`Ingrese una Cedula Valida`, {
                     position: "top-right",
@@ -163,7 +163,7 @@ const RegisterForm = () => {
                 <div className='container__component'>
                     <div>
                         <h4 className='form__title'>
-                            Registro En Planilla
+                            Registro de Votantes
                         </h4>
                     </div>
                     <div style={styles} >

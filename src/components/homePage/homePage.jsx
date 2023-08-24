@@ -22,8 +22,9 @@ const HomePage = () => {
   }
 
   useEffect(() => {
-    if(data.length === 0){
-      fetchData()}
+    if (data.length === 0) {
+      fetchData()
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -34,8 +35,18 @@ const HomePage = () => {
         <Cards title="Coordinadores Activos" number={data?.activeCoordinators ? data?.activeCoordinators : 0} icon={<HiOutlineDocumentAdd size={50} />} />
         <Cards title="Lideres Activos" number={data?.activeLeaders ? data?.activeLeaders : 0} icon={<HiOutlineUserGroup size={50} />} />
         {/* <Cards title="Personas Habilitadas Para Votar" number={'329.093'} icon={<HiOutlineClipboardCheck size={50} />} /> */}
-        <Cards title="Porcentaje de éxito vs la meta proyectada (3000)" number={data?.voters ? Math.round((data?.voters / 3000) * 100) + "%" : '0%'} icon={<HiOutlineClipboardCheck size={50} />} />
         <Cards title={`Votantes Registrados`} number={data?.voters ? data?.voters : 0} icon={<HiOutlineClipboardCheck size={50} />} />
+        {user.role === 'LEADER' ?
+          <>
+            <div className="card__single">
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', flexDirection: 'column' }}>
+                <span>Acceso al formulario de inscripción.</span>
+                <button className='button_register' onClick={() => { window.open(`${window.location.origin}/registerForm?leaderid=${user?.cedula}`, '_blank') }}>Registro de Votantes</button>
+              </div>
+            </div>
+          </>
+          :
+          <Cards title="Porcentaje de éxito vs la meta proyectada (3000)" number={data?.voters ? Math.round((data?.voters / 3000) * 100) + "%" : '0%'} icon={<HiOutlineClipboardCheck size={50} />} />}
       </div>
 
       <div className="home__grid">
